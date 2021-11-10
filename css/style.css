@@ -217,6 +217,7 @@
 
   background-color: #fdf2e9;
   z-index: -2;
+  animation: effect 1s 0.5s infinite ease;
 }
 
 .step-img-box::after {
@@ -228,6 +229,18 @@
 
   background-color: #fae5d3;
   z-index: -1;
+}
+
+@keyframes effect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .step-img {
@@ -628,4 +641,14 @@
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/* section effect*/
+section:not(:first-child) {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(9rem);
 }
